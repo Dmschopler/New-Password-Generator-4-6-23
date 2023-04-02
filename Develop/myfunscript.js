@@ -34,6 +34,19 @@ function writePassword() {
 
   console.log(finalPassword)
 
+for (var i = 0; i < userChoiceLength; i++) {
+  console.log(Math.round(Math.random() * userChoiceLength) + 1);
+}
+
+var myPassword
+
+let text = myPassword.toString();
+
+
+// do {
+//   ("enter length between 8-128"
+// }
+
   // var myPassword
 
   // // Math.floor(Math.random() *)
@@ -41,10 +54,6 @@ function writePassword() {
     return
 }
 
-
-// if (confirm("Click OK to confirm including uppercase characters.") == true {
-//   finalPassword.push(upper)
-// }
 // // Write password to the #password input
 // function writePassword() {
 //   var password = generatePassword();
