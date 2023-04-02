@@ -4,7 +4,8 @@ var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "U", "V", "W", "x", "y", "z"];
 var num = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var characters = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", ">", "=", "?", "@", "[", "]", "^", "_", "~", "|"];
-var finalPassword = []
+var solutionSet = []
+var myPassword = []
 
 function writePassword() {
   var userChoiceUpper = window.confirm("Click OK to confirm including uppercase characters.");
@@ -14,33 +15,39 @@ function writePassword() {
   var userChoiceLength = window.prompt("How many characters would you like your password to contain?");
   
   var x 
+  var passwordIndex
 
   if (userChoiceUpper == true) {
-    x = finalPassword.concat(upper);
-    finalPassword = x;
+    x = solutionSet.concat(upper);
+    solutionSet = x;
   }
   if (userChoiceLower == true) {
-    x = finalPassword.concat(lower);
-    finalPassword = x;
+    x = solutionSet.concat(lower);
+    solutionSet = x;
   }
   if (userChoiceNum == true) {
-    x = finalPassword.concat(num);
-    finalPassword = x;
+    x = solutionSet.concat(num);
+    solutionSet = x;
   }
   if (userChoiceChar == true) {
-    x = finalPassword.concat(characters);
-    finalPassword = x;
+    x = solutionSet.concat(characters);
+    solutionSet = x;
   }
 
-  console.log(finalPassword)
+  console.log(solutionSet)
 
 for (var i = 0; i < userChoiceLength; i++) {
-  console.log(Math.round(Math.random() * userChoiceLength) + 1);
+  passwordIndex = (Math.round(Math.random() * solutionSet.length) + 1);
+  var item = solutionSet[passwordIndex];
+  myPassword += item 
 }
 
-var myPassword
+console.log(myPassword)
 
-let text = myPassword.toString();
+div.textarea.setAttribute("placeholder", myPassword)
+
+
+// let text = myPassword.toString();
 
 
 // do {
