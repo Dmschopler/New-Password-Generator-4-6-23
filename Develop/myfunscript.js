@@ -14,8 +14,14 @@ function writePassword() {
   var userChoiceChar = window.confirm("Click OK to confirm including special characters.");
   var userChoiceLength = window.prompt("How many characters would you like your password to contain?");
   
-  var x 
-  var passwordIndex
+if ((userChoiceLength < 8 || userChoiceLength > 128) || isNaN(userChoiceLength))
+  do{
+    var userChoiceLength = window.prompt("How many characters would you like your password to contain? Your answer must be a number between 8 and 128.")
+    } while ((userChoiceLength < 8 || userChoiceLength > 128) || isNaN(userChoiceLength));
+
+
+  var x = [];
+  var passwordIndex = [];
 
   if (userChoiceUpper == true) {
     x = solutionSet.concat(upper);
@@ -37,28 +43,13 @@ function writePassword() {
   console.log(solutionSet)
 
 for (var i = 0; i < userChoiceLength; i++) {
-  passwordIndex = (Math.round(Math.random() * solutionSet.length) + 1);
+  passwordIndex = (Math.floor(Math.random() * solutionSet.length));
   var item = solutionSet[passwordIndex];
   myPassword += item 
 }
 
-console.log(myPassword)
+document.getElementById("password").textContent = myPassword;
 
-div.textarea.setAttribute("placeholder", myPassword)
-
-
-// let text = myPassword.toString();
-
-
-// do {
-//   ("enter length between 8-128"
-// }
-
-  // var myPassword
-
-  // // Math.floor(Math.random() *)
-
-    return
 }
 
 // // Write password to the #password input
