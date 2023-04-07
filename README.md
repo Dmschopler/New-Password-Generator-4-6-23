@@ -7,4 +7,4 @@ This website was created to give people the opportunity to create a new password
 ![Alt text](Assets/password-generator-screenshot.png)
 ## URL of Deployed Link
 
-https://dmschopler.github.io/Portfolio-Home-Page-3-30-23/
+https://dmschopler.github.io/New-Password-Generator-4-6-23/
